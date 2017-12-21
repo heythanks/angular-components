@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <title>
+                动态二级菜单
+            </title>
+            <link href="./test.css" rel="stylesheet" type="text/css">
+                <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js" type="text/javascript">
+                </script>
+            </link>
+        </meta>
+    </head>
+    <body ng-app="myapp">
+        <div id="container" ng-controller="myCtrl">
+            <div class="menu-box">
+                <ul class="list-box1">
+                    <li class="list-box-item1" ng-repeat="items in listData track by $index" ng-click="showFn(items.name,$index)">
+                        {{items.name}}
+                        <ul class="list-box2" ng-style="listStyle" ng-show="showlist[$index]">
+                            <li class="list-box-item2" ng-repeat="item in items.sublist track by $index" >
+                                {{item.name}}
+                                <ul class="list-box3">
+                                    <li class="list-box-item3" ng-repeat="tem in item.lastlist track by $index">{{tem.name}}</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div id="tap">
+                <div class="tab-box">
+                    <div class="tap-title">
+                        <ul>
+                            <div class="line" id="line" ng-style="mystyle">
+                            </div>
+                            <li ng-class="{'active':showTag[index]}" ng-click="clickFn(index)" ng-repeat="(index,item) in title">
+                                {{item}}
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="table-container">
+                        <!-- 表头 -->
+                        <table width="360">
+                            <tr>
+                                <td ng-repeat="item in table_title">
+                                    {{item}}
+                                </td>
+                            </tr>
+                        </table>
+                        <!-- 表格数据 -->
+                        <div class="table-box">
+                            <table ng-show="showTag[0]" width="360">
+                                <tr ng-repeat="items in dataList[0] track by $index">
+                                    <td ng-repeat="item in items track by $index">
+                                        {{item}}
+                                    </td>
+                                </tr>
+                            </table>
+                            <table ng-show="showTag[1]" width="360">
+                                <tr ng-repeat="items in dataList[1] track by $index">
+                                    <td ng-repeat="item in items track by $index">
+                                        {{item}}
+                                    </td>
+                                </tr>
+                            </table>
+                            <table ng-show="showTag[2]" width="360">
+                                <tr ng-repeat="items in dataList[2] track by $index">
+                                    <td ng-repeat="item in items track by $index">
+                                        {{item}}
+                                    </td>
+                                </tr>
+                            </table>
+                            <table ng-show="showTag[3]" width="360">
+                                <tr ng-repeat="items in dataList[3] track by $index">
+                                    <td ng-repeat="item in items track by $index">
+                                        {{item}}
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="time-container">
+                            {{date}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="img">
+                <div class="img-wrapper">
+                    <img id="image" src="./img/load.png" height="50px" width="50px">
+                </div>
+                <div class="img-box">
+                    <input type="file" id="upload" name="" onchange="loadImage();">
+                    <button onclick="submit()">上传图片</button>
+                </div>
+            </div>
+            <div id="form">
+                <div class="img-wrapper">
+                    <img src="./img/load.png" id="transform" height="50px" width="50px">
+                </div>
+                <div class="img-box">
+                <form id="form1">
+                    <input type="file" id="upload-img" name="" >
+                    <input type="submit" value="上传" onclick="">
+                </form>
+                    
+                </div>
+            </div>
+            <input type="text" name="" onchange="test()">
+        </div>
+        <script src="./test.js">
+        </script>
+    </body>
+</html>

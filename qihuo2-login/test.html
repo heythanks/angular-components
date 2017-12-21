@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <title>
+                Document
+            </title>
+            <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js">
+            </script>
+            <link href="./test.css" rel="stylesheet" type="text/css">
+            </link>
+        </meta>
+    </head>
+    <body ng-app="myapp">
+        <div id="main" ng-class="{true:'rotate',false:''}[!login]" ng-controller="myCtrl">
+            <div class="login animate-one">
+                <a href="javascript:void(0)" ng-click="clickFn()">
+                    去注册
+                </a>
+            </div>
+            <div class="registration animate-two">
+                <a href="javascript:void(0)" ng-click="clickFn()">
+                    去登录
+                </a>
+                <div class="btn-group">
+                	<button ng-click="goStep(1)" ng-show="step<1">提交第一步</button>
+                	<button ng-click="goStep(2)" ng-show="step<2">提交第二步</button>
+                </div>
+                <div class="steps">
+                	<div class="step-box">
+	                	<div class="step" ng-class="{'step-complete':step>=0}" attr-txt="第一步">1</div>
+	                	<div class="step-line " ng-class="{'complete':step>0,'progress':step===0}"></div>
+	                	<div class="step" ng-class="{'step-complete':step>=1}" attr-txt="第二步">2</div>
+	                	<div class="step-line" ng-class="{'complete':step>1,'progress':step===1}"></div>
+	                	<div class="step" attr-txt="第三步" ng-class="{'step-complete':step>=2}">3</div>
+                	</div>
+                </div>
+                <div class="finish" ng-if="step===2">
+                	<div class="finish-font">恭喜您已完成，剩{{second}}s进入登录</div>
+            	</div>
+                <div class="test">
+                    123
+                </div>
+            </div>
+        </div>
+        <script src="./test.js">
+        </script>
+    </body>
+</html>

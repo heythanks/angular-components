@@ -1,0 +1,98 @@
+#main .test{
+    height: 100px;
+    width: 100px;
+    color: #fff;
+}
+
+
+
+#main {
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+    transition:all .8s linear;
+    transform-style: preserve-3d;
+}
+.rotate{ transform: rotateY(180deg); }
+#main .login {
+    width: 100%;
+    background: red;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#main .registration {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: green;
+}
+#main .animate-one {
+    transform:rotateY(180deg);
+    backface-visibility: hidden;
+}
+#main .animate-two {
+    transform:rotateY(0deg);
+    backface-visibility: hidden;
+}
+#main .registration .steps{
+    color: #fff;
+    width: 300px;
+    overflow: hidden;
+    height: 50px;
+    margin: 30px auto 0;
+}
+#main .registration .finish{
+    margin-top: 50px;
+}
+#main .registration .finish .finish-font{
+    width: 300px;
+    text-align: center;
+    margin: 0 auto;
+    color: #fff;
+}
+#main .registration .steps .step-box .step-complete{
+    border: 1px solid red;
+    background: #fff;
+    color: red;
+}
+#main .registration .step-box{
+    margin-left: 56px;
+}
+#main .registration .steps .step-box .progress{
+    background: -webkit-linear-gradient(left, #eb1d24, #EEEEEE);
+}
+#main .registration .steps .step-box .complete{
+    background: red;
+}
+#main .registration .steps .step{
+    height: 24px;
+    width: 24px;
+    border-radius: 12px;
+    background: gray;
+    line-height: 24px;
+    text-align: center;
+    position: relative;
+    float: left;
+
+}
+#main .registration .steps .step-line{
+    width: 50px;
+    height: 6px;
+    background: gray;
+    float: left;
+    margin-top: 10px;
+}
+#main .registration .steps .step::after{
+    content: attr(attr-txt);
+    width: 100px;
+    position: absolute;
+    top: 100%;
+    transform: translateX(-50%);
+    left: 50%;
+
+}

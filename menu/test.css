@@ -1,0 +1,102 @@
+#container{
+	margin: 10px;
+	width: 100%;
+}
+ul{
+	list-style: none;
+	padding: 0;
+}
+#container .menu-box{
+	width: 100px;
+	background: gray;
+	height: 200px;
+	text-align: center;
+}
+#container .menu-box .list-box2{
+    transition: all 2s linear;
+    border-left: 2px solid red;
+}
+#container .menu-box .list-box-item2{
+	position: relative;
+	width: 100px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+}
+#container .menu-box .list-box-item2 .list-box3{
+    position: absolute;
+    left: 100px;
+    width: 100px;
+    top: 0;
+}
+
+#tap .tab-box{
+	width: 430px;
+	height: 320px;
+	border: 10px solid #eee;
+	background: #fff;
+}
+#tap .tab-title{
+	height: 40px;
+	margin: 0 auto;
+}
+#tap .tap-title ul{
+	position: relative;
+	padding-left: 40px;
+}
+#tap .tap-title ul li{
+	box-sizing: border-box;
+	width: 90px;
+	height: 40px;
+	border: 1px solid #eee;
+    line-height: 40px;
+    text-align: center;
+    display: inline-block;
+}
+#tap .tap-title ul .active{
+	border-bottom: none;
+}
+.tab-box .table-container{
+	padding-left: 40px;
+    margin-top: -16px;
+}
+table td{
+	text-align: center;
+	width: 90px;
+}
+.table-box{
+    width: 360px;
+    border: 1px solid #eee;
+    border-top: none;
+    margin-top: -4px;
+    box-sizing: border-box;
+}
+.line{
+	width: 90px;
+	height: 0;
+	border: 2px solid #4a637c;
+	box-sizing: border-box;
+	position: absolute;
+	left:40px;
+	transition: all 1s
+}
+#img .img-wrapper{
+	height: 200px;
+	width: 200px;
+	background-size: cover;
+	margin-top: 10px;
+}
+#img .img-wrapper img{
+	height: 100%;
+	width: 100%;
+}
+#form .img-wrapper{
+	height: 200px;
+	width: 200px;
+	background-size: cover;
+	margin-top: 10px;
+}
+#form .img-wrapper img{
+	height: 100%;
+	width: 100%;
+}

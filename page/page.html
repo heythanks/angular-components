@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <title>
+                Document
+            </title>
+            <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js">
+            </script>
+            <link href="./page.css" rel="stylesheet" type="text/css">
+            </link>
+        </meta>
+    </head>
+    <body ng-app="myapp">
+        <div ng-controller="my-page" id="page">
+            <div class="list-container">
+                <table class="list-box">
+                    <tr>
+                       <th>视频id</th> 
+                       <th>视频名称</th>
+                       <th>url地址</th>
+                       <th>真实地址</th>
+                    </tr>
+
+                </table>
+            </div>
+            <ul class="page-box">
+                <li class="before" >&lt;</li>
+                <li class="page-list" ng-repeat="(index,item) in pages" ng-click="getpage(item)" ng-class="{'active':$index == p_currents }">{{item}}</li>
+                <li class="next" ng-click="next()">&gt;</li>
+            </ul>
+            <span>共{{count}}条</span>
+        </div>
+        <script src="./page.js">
+        </script>
+    </body>
+</html>
